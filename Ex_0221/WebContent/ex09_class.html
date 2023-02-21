@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>클래스의 깊이</title>
+		
+		<style>
+			/* 띄어쓰기의 의미는 그 안으로 들어가서 관련된 태그를 찾아라 라는 의미이다. */
+			.box h2{color:red;} /* .box h2 : box 클래스 내부의 h2라는 의미이다., 띄어쓰기도 유의미!! */
+			.box p{color:green;}
+			div .box{color:olive;}
+			/* div.box : div 태그 중에 box 클래스를 갖는 것을 의미 */
+			/* div .box : div 태그 안으로 들어가서 box 클래스를 갖는 태그를 의미 */
+			span{color:gray;}
+			div.box .box2 .s_blue{color:blue;}
+			/* 나중에 충돌을 방지하기 위해 정확한 경로를 설정해 주는 것이 좋다. */
+			h2 .s_green{color:#00ff00;}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<h2><span>클래스</span> 연습 중 입니다.</h2>
+			<p>우직한 로디 수줍은 루피</p>
+			
+			<div class="box2">
+				<h2><span class="s_blue">클래스</span> 연습 중 입니다.</h2>
+			</div>
+		</div>
+		
+		<h2>클래스 <span class="s_green">연습 중 입니다.</span></h2>
+		
+	</body>
+</html>

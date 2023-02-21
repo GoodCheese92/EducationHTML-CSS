@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>class 활용</title>
+		
+		<style>
+			/* text라는 이름의 클래스로 접근하기 위해 .을 사용 */
+			/* .text{color:#329628;} */
+			
+			/* p태그 중에서 class가 text인 태그에게 접근 */
+			/* .앞에 띄어쓰기가 허용이 안된다. */
+			p.text{color:#329628;} 
+			.text2{color:#aaf;}
+		</style>
+	</head>
+	
+	<body>
+		<!-- class 속성 : 태그의 디자인만을 위해 존재하는 속성
+			  중복된 이름으로 여러 개의 태그에게 클래스를 지정하는 것이 가능. -->
+		<h2 class="text">클래스 연습</h2>
+		<p class="text2">
+			개구쟁이 뽀로로 장난꾸러기 크롱
+		</p>
+		
+		<p class="text">
+			우람한 포비 조그만 해리도 사이좋은 친구죠
+		</p>
+	</body>
+</html>

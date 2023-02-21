@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>id를 통한 css적용</title>
+		
+		<style type="text/css">
+			/* 클래스의 접근이 .이었다면, id의 접근은 #이다. */
+			#aa{color:red;
+				background:aqua;} /* 접근하는 방법은 class와 같다. */
+				
+			#bb{color:fuchsia;}
+		</style>
+	</head>
+	
+	<body>
+		<!-- id : 스타일 변경 뿐만 아니라, 태그의 검색, 접근 등의 다양한 기능을 포함하고 있는 속성이므로
+			  중복된 id를 생성할 수 없다. -->
+		<h1 id="aa">아이디 연습 중1</h1>
+		<h1 id="bb">아이디 연습 중2</h1>
+	</body>
+</html>

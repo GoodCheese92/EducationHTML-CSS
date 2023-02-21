@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+	<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>html 테이블</title>
+	</head>
+	
+	<body>
+		<table border="1">
+			<caption style="color:#3c9600	">테이블의 제목</caption>
+			<!-- semantic tag : 브라우저가 스스로 인식하고 위치를 선정할 수 있도록 하는 태그 -->
+			<thead><!-- table head -->
+				<tr>
+					<th>구분</th><!-- table header, 중앙정렬하면서 두껍게 -->
+					<th>태블릿pc</th>
+					<th>스마트폰</th>
+				</tr>
+			</thead>
+			
+			<!-- 시각 장애인을 위해 총 판매량의 정보를 먼저 읽기 위해서 위치를 변경하여도
+				  head, body, foot가 세팅되어 있기 때문에 표의 위치는 변경되지 않는다. -->
+			<tfoot><!-- table foot --> 
+				<tr>
+					<th>총 판매량</th>
+					<td>5만대</td>
+					<td>16만대</td>
+				</tr>
+			</tfoot>
+			
+			<tbody><!-- table body -->
+				<tr>
+					<th>상반기 판매량</th>
+					<td>2만대</td>
+					<td>5만대</td>
+				</tr>
+				
+				<tr>
+					<th>하반기 판매량</th>
+					<td>3만대</td>
+					<td>11만대</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</body>
+	
+</html>

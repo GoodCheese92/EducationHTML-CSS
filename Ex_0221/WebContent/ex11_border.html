@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border(선)</title>
+		
+		<style type="text/css">
+			p{border-width:20px; /* 스타일 시트에서 적용할 때는 width를 설정 및 픽셀 단위 꼭 적어줘야 한다. */
+			  border-color:blue;}
+			  
+			.box1{border-style:none;} /* 테두리를 없앰 */
+			.box2{border-style:hidden;} /* 테두리가 존재하기는 하지만 표현되지 않음 */
+			.box3{border-style:dotted;} /* 테두리를 점선으로 설정 */
+			.box4{border-style:dashed;} /* 테두리를 약간 긴 점선으로 설정 */
+			.box5{border-style:solid;} /* 실선, 가장 많이 사용하는 속성 */
+			.box6{border-style:double;} /* 테두리를 이중 실선으로 설정함. */
+			.box7{border-style:groove;} /* 테두리를 3차원인 입체적인 선으로 설정하며, border-color 속성값에 영향을 받음. */ 
+			.box8{border-style:ridge;} /* 테두리를 3차원인 능선효과가 있는 선으로 설정하며, border-color 속성값에 영향을 받음. */
+			.box9{border-style:inset;} /* 테두리를 3차원인 내지로 끼운 선으로 설정하며, border-color 속성값에 영향을 받음. */
+			/* border의 width, color, style을 한 줄로 정의한 구조 */
+			.box10{border:20px #f00 outset;} /* border의 속성을 :을 통해서 모두 수정가능, 테두리를 3차원인 외지로 끼운 선으로 설정하며, border-color 속성값에 영향을 받음. */
+			
+			/* 크기를 수정해도 여전히 블록 요소이기 때문에 같은 행에 다른 요소를 넣을 수 없다. */
+			.div1{border:10px solid green;
+				  width:200px;
+				  height:100px;}
+				  
+			/* 따로 상하좌우를 설정할 수 있다. */
+			.div2{border-left:10px solid blue;
+				  border-right:10px solid blue;}
+			
+			/* 4개일 경우 : 상(위)부터 시계방향 순서이다. */				  
+			/* 3개일 경우 : 상, 좌우, 하 순서이다. */				  
+			/* 2개일 경우 : 왼쪽은 상하, 오른쪽은 좌우이다. */
+			/* 1개일 경우 : 모든 테두리를 의미한다. */
+			/* 상, 우, 하, 좌에 각각의 속성들을 별개로 적용하고 싶다면
+			   border:가 아닌 border-width, border-style등 풀네임을 사용해야 한다. */							  
+			.div3{border-width:10px 20px 30px 40px;
+				  border-style:solid;
+				  border-color:blue red;}
+			 
+		</style>
+	</head>
+	
+	<body>
+		<p class="box1">Border-style:none;</p>	
+		<p class="box2">Border-style:hidden;</p>	
+		<p class="box3">Border-style:dotted;</p>	
+		<p class="box4">Border-style:dashed;</p>	
+		<p class="box5">Border-style:solid;</p>	
+		<p class="box6">Border-style:double;</p>	
+		<p class="box7">Border-style:groove;</p>	
+		<p class="box8">Border-style:ridge;</p>	
+		<p class="box9">Border-style:inset;</p>	
+		<p class="box10">Border-style:outset;</p>
+		
+		<div class="div1">
+			div의 border속성
+		</div>
+		
+		<div class="div2">
+			div의 border속성
+		</div>
+		
+		<div class="div3">
+			div의 border속성
+		</div>	
+		
+	</body>
+</html>
