@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>백그라운드 이미지의 포지션</title>
+		
+		<style type="text/css">
+			p{width:500px; height:150px;
+			border:1px solid black;}
+			
+			.b1{background:#2DB400 url(image/background.jpg) no-repeat right bottom;}
+			.b2{background:#2DB400 url(image/background.jpg) no-repeat 20px 100px;} /* 좌부터 20px, 위부터 100px */
+			.b3{background:#2DB400 url(image/background.jpg) no-repeat center;}
+			.b4{background:#266000 url(image/background.jpg) no-repeat 70% 10%;} /* 좌부터 70%, 위부터 10% */
+		</style>
+	</head>
+	
+	<body>
+		<p class="b1">5점 안주신 분들은 나가주세요.</p>
+		<p class="b2">5점 안주신 분들은 나가주세요.</p>
+		<p class="b3">5점 안주신 분들은 나가주세요.</p>
+		<p class="b4">5점 안주신 분들은 나가주세요.</p>
+	</body>
+</html>

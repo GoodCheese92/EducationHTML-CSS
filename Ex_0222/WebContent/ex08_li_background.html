@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>li의 점 제거하기</title>
+		
+		<style type="text/css">
+			/* list-style
+			   none : 아무 것도 없는 것
+			   disc : 검은 점
+			   circle : 하얀 점
+			   square : 네모 */
+			.c1 li{list-style:none;
+				   background:url(image/bg_dotted.gif) no-repeat 0 50%;
+				   padding-left:10px;}
+				   
+			/* c2클래스 li의 점을 제거하고 arrow.gif이미지로 대체하시오 */
+			.c2 li{list-style:none;
+				   background:url(image/arrow.gif) no-repeat 0 50%;
+				   padding-left:10px;}
+		</style>
+	</head>
+	
+	<body>
+		<h2>뽀로로 친구들</h2>
+		<ul class="c1">
+			<li>크롱</li>
+			<li>포비</li>
+			<li>로디</li>
+			<li>패티</li>
+		</ul>
+		
+		<hr>
+		
+		<h2>뽀로로 친구들</h2>
+		<ul class="c2">
+			<li>크롱</li>
+			<li>포비</li>
+			<li>로디</li>
+			<li>패티</li>
+		</ul>
+	</body>
+</html>

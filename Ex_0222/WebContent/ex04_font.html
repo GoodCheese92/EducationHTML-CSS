@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>font</title>
+		
+		<style type="text/css">
+			.a1{font-size:20px;}
+			.a2{font-style:italic;}
+			.a3{font-weight:bold;}
+			/* 여러개의 글꼴을 미리 준비해두고, 브라우저에서 글꼴이 지원되지 않는다면
+			      가장 표준적인 글꼴인 sans-serif를 사용한다. */
+			.a4{font-family:"궁서", "굴림", sans-serif;} /* 한글로 된 글꼴에만 큰따옴표를 쓴다. */
+			/* 소문자 사이즈의 대문자 */
+			.a5{font-variant:small-caps;}
+			
+			/* 폰트에 속성을 한번에 적용하려면 다음의 순서를 지켜줘야 한다.
+			   weight, style, variant, size, family */
+		/*	.a6{font:bold italic small-caps 30px "궁서", sans-serif;}*/
+		
+			.a6{font:30px "돋움", sans-serif;} /* 만약 쓰고 싶지 않은 속성이 있다면 빼고 나머지만 순서를 지켜주면 된다. */
+			
+			/* 속성을 한가지만 사용할거라면 풀네임을 모두 기술하여야 한다.
+			   font:30px;(X)
+			   font:"굴림";(X)
+			   font-size:30px;(O)
+			   font-family:"굴림";(O) */			
+		</style>
+	</head>
+	
+	<body>
+		<p class="a1">글자 크기</p>
+		<p class="a2">글자 스타일</p>
+		<p class="a3">글자 굵기</p>
+		<p class="a4">글꼴</p>
+		<p class="a5">The end</p>
+		
+		<p class="a6">한 줄로 합쳐진 font의 css 속성 접근하기</p>
+		
+	</body>
+</html>

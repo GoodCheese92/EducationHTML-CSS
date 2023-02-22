@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>padding(안쪽여백)</title>
+		
+		<style type="text/css">
+			p{border:5px solid red;
+			  background:yellow;}
+			  
+			.box1{padding:20px;} /* 1개 : 전부(상하좌우) */
+			.box2{padding:20px 50px;} /* 2개 : 상하, 좌우 */
+			/* 0일 경우 단위를 쓰지 않아도 된다. */
+			.box3{padding:0 50px 30px;} /* 3개 : 상, 좌우, 하 */
+			.box4{padding:20px 30px 50px 70px;} /* 4개 : 상, 우, 하, 좌 */
+		</style>
+	</head>
+	
+	<body>
+		<p class="box1">띠띠띠 빵빵빵 달리는게 너무 좋아</p>
+		<p class="box2">띠띠띠 빵빵빵 달리는게 너무 좋아</p>
+		<p class="box3">띠띠띠 빵빵빵 달리는게 너무 좋아</p>
+		<p class="box4">띠띠띠 빵빵빵 달리는게 너무 좋아</p>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>메뉴 만들기</title>
+		
+		<style type="text/css">
+			.main_menu{width:130px;
+					   /* border:1px solid red; */
+					   }
+			.main_menu li{list-style:none;}
+			
+			.main_menu a{text-decoration:none; /* a 태그의 밑줄 제거 */
+						 background:#2db400;
+						 padding:5px;
+						 display:block; /* a 태그를 블록요소로 변경 */
+						 margin:3px 0;
+						 color:#fff;}
+			/* :hover는 a 태그에 마우스를 올렸을 때, 동작하도록 하는 가상 클래스 */
+			a:hover{font-weight:bold;
+					background:#0c0;
+					color:#ff0;
+			} 
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<h1>주 메뉴</h1>
+			
+			<ul class="main_menu">
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">PRODUCT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMMUNITY</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

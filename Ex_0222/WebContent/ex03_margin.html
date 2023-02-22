@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>margin(바깥쪽 여백)</title>
+		
+		<style type="text/css">
+			p{border:10px solid red;
+			  background:aqua;}
+			
+			.box1{margin:20px;} /* 1개 : 전부(상하좌우) */
+			/* margin은 작은 값을 무시한다. 따라서 box1과 box2와의 margin은 20+40px가 아니라 40px이다. */
+			.box2{margin:40px 60px;} /* 2개 : 상하, 좌우 */
+			.box3{margin:20px 50px 30px;} /* 3개 : 상, 좌우, 하 */
+			.box4{margin:20px 30px 50px 0;} /* 4개 : 상, 우, 하, 좌 */
+			.box5{margin:0px;} /* 기본적으로 p태그는 16px를 가지므로 그 밑으로는 적용이 안된다. */	
+		</style>
+	</head>
+	
+	<body>
+		<!-- 기본적으로 p태그는 16px 간격을 갖는다. -->
+		<p class="box1">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box2">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box3">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box4">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box5">띠띠뽀 꼬마기차 띠띠뽀</p>
+	</body>
+</html>
