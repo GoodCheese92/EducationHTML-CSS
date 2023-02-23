@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>슈도(pseudo) 클래스</title>
+		
+		<style type="text/css">
+			li{display:inline;
+			   list-style:none;
+			   font-size:50px;}
+			   
+			/* nth-child() : 메서드처럼 ()안에 조건을 넣을 수 있다. */
+			li:nth-child(odd){color:red;} /* 홀수 위치의 태그의 속성 변경 */
+			li:nth-child(even){color:green;} /* 짝수 위치의 태그의 속성 변경 */
+			li:nth-child(4n){background:yellow;} /* 4의 배수 위치 */
+			li:nth-child(6){color:black; background:aqua;} /* 6의 위치 */
+		</style>
+	</head>
+	
+	<body>
+	<!-- pseudo : 모조의, 가짜의 -->
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<hr>
+		
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+	</body>
+</html>

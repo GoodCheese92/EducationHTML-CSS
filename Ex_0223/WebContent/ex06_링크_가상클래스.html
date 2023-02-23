@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>링크 가상클래스</title>
+		
+		<style type="text/css">
+			a{text-decoration:none;
+			  color:#2db600;}
+			
+			/* visited는 한번 누른 버튼의 색깔을 바꿔주지만 잘 사용하지 않는다.
+			      이유는  이쁘지 않아서? */  
+			/* a:visited{color:purple;} */
+			
+			/* 마우스 오버 감지 */  
+			a:hover{color:orange;
+					text-decoration:underline;}
+			
+			/* 마우스 클릭 감지 */
+			a:active{color:red;}
+			
+			/* 순서상으로 visited -> hover -> active 순으로 써야 모두 작동을 잘한다! */
+		</style>
+	</head>
+	
+	<body>
+		<a href="#">메뉴 1</a><br>
+		<a href="#">메뉴 2</a><br>
+		<a href="#">메뉴 3</a><br>
+		<a href="#">메뉴 4</a><br>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float 정렬을 통한 layout</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+		
+			#wrap{border:1px solid black;
+				  width:700px;
+				  height:500px;
+				  margin: 10px auto;
+				  background:#2db600;
+				  font-weight:bold;
+				  font-family:"휴먼명조", sans-serif;}
+				  
+			#header{background:white;
+					margin-bottom:10px;
+					text-align:center;
+					font-size:50px;
+					color:blue;
+					font-family:"hy헤드라인m", sans-serif;}
+					
+			#content{background:#B7F0B1;
+					 margin-bottom:10px;
+					 overflow:hidden;
+					 text-indent:10px;}
+					 
+			.left{float:left;
+				  width:200px;
+				  height:250px;
+				  padding:10px;
+				  background:#ABF200;
+				  }
+			
+			.center{float:left;
+				  width:200px;
+				  height:250px;
+				  padding:10px;
+				  margin:0 20px;
+				  background:#DAD9FF;
+				  }
+				    
+			.right{float:right;
+				  width:200px;
+				  height:250px;
+				  padding:10px;
+				  background:#86E57F;
+				  }  
+			
+			span{display:block;
+				 text-align:center;}
+			
+			#footer{text-align:center;
+					font:bold italic 30px "hy신명조", sans-serif;
+					}
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<p>명언 모음집</p>
+			</div>
+			
+			<div id="content">
+				<p class="left">
+					세상에서 가장 현명한 사람은 모든 사람으로부터 배우는 사람이다<br>
+					가장 사랑받는 사람은 칭찬하는 사람이다<br>
+					가장 강한 사람은 감정을 조절할 줄 아는 사람이다<br>
+					<span>-탈무드-</span>
+				</p>
+				<p class="center">
+					진정으로 웃으려면 고통을 참아야 하며
+					나아가 고통을 즐길 줄 알아야 한다<br>
+					<span>-찰리 채플린-</span>
+				</p>
+				<p class="right">
+					단순하게 살아라<br>
+					현대인은 쓸데없는 절차와 일 때문에
+					얼마나 복잡한 삶을 살아가는가?<br>
+					<span>-이드리스 샤흐-</span>
+				</p>
+			</div>
+			
+			<div id="footer">
+				&copy;구글에서 긁어 옴!!
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>first-child, last-child</title>
+		
+		<style type="text/css">
+			/* 나뉘어져 있는 영역에서 가장 첫번째 태그만 바꿀 때 */
+			p:first-child{color:blue;} /* ":" : 뜻은 가상클래스를 의미한다. 특정한 상황에서 쓰는 경우 */
+			/* 나뉘어져 있는 영역에서 가장 마지막 태그만 바꿀 때 */
+			p:last-child{color:red;}
+		</style>
+	</head>
+	
+	<body>
+		<div class="d1">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+		</div>
+		
+		<hr>
+		
+		<div class="d2">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+		</div>
+	</body>
+</html>

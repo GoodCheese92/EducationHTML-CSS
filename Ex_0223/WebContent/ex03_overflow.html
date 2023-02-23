@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>overflow</title>
+		
+		<style type="text/css">
+			p{border:1px solid black;
+			  padding:5px;
+			  width:150px;
+			  height:50px;}
+			  
+			.a1{overflow:hidden;} /* 블록요소 크기에 안맞는 글자는 숨겨진다.(= 보여지지 않는다.) */
+			.a2{overflow:scroll;} /* 우측, 하단측에 내용이 넘치는 것과는 별개로 무조건 스크롤을 보여주는 속성 */
+			.a3{overflow:auto;} /* 내용이 넘칠때만 보여주는 스크롤 */
+			.a4{overflow:visible;} /* default 값, 넘치는 내용을 다 표시함 */
+			/* .a5{overflow:auto;} */			
+		</style>
+	</head>
+	
+	<body>
+		<p class="a1">
+			쨍쩅한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		
+		<p class="a2">
+			쨍쩅한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		
+		<p class="a3">
+			쨍쩅한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		
+		<p class="a4">
+			쨍쩅한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		
+		<!-- 영어는 너비를 넘어가면서 써지지만 한글은 너비가 끝나면 알아서 줄바꿈이 일어난다.
+		          왜 인지는 좀 더 알아봐야 할 듯! -->
+		<p class="a5">
+			sdfimsdofinsdoifnofinweofnweoifnowiefnoweinfowenfownoi
+			한글도 길게길게 많이많이 쓰고, 쨍쩅한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+	</body>
+</html>
