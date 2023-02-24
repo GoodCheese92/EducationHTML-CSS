@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션 효과</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			.t{width:300px; height:300px;
+			   margin:10px auto;
+			   background:#2db600;
+			   border-radius:0px;
+			   /* 애니메이션 효과 */
+			   transition-property:background, border-radius;
+			   transition-duration:1s; /* 1초에 걸쳐 배경색과 테두리를 변경할 예정 */
+			   transition-delay:1s; /* 1초 후 변경 */
+			   
+			   /* 모든 웹 브라우져에서 실행 되지 않을 때를 위한 코드 */
+			   -moz-transition-property:background, border-radius;
+			   -moz-transition-duration:1s; /* 1초에 걸쳐 배경색과 테두리를 변경할 예정 */
+			   -moz-transition-delay:1s; /* 2초 후 변경 */
+			   
+			   -o-transition-property:background, border-radius;
+			   -o-transition-duration:1s; /* 1초에 걸쳐 배경색과 테두리를 변경할 예정 */
+			   -o-transition-delay:1s; /* 2초 후 변경 */
+			   }
+			   
+			   /* -moz- : 파이어폭스 적용 
+			      -o- : 오페라 브라우저
+			      -ms- : 익스플로러
+			      -webkit- : 크롬, 사파리 브라우저 */
+			   
+			.t:hover{background:blue;
+					 border-radius:50px;}
+		</style>
+	</head>
+	
+	<body>
+		<div class="t">
+		
+		</div>
+	</body>
+</html>

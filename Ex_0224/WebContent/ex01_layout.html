@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout 정의하기</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			header{width:960px; height:150px; 
+				   margin:10px auto;
+				   /* border:1px solid red; */
+				   position:relative;} /* 자손 태그들의 위치를 absolute로 지정하기 때문에 꼭 relative로 설정 */
+				   
+			#hgroup{position:absolute; left:5px; top:3px;}
+			
+			li{float:left;}
+			
+			/* a1 정의 */
+			#a1 ul{overflow:hidden;}
+			#a1{position:absolute; right:3px; top:3px;}
+			#a1 ul li{border-right:1px solid gray; /* 모두 다 주면 2px로 중간에 겹치므로 오른쪽만 일단 설정 */
+					  border-top:1px solid gray;
+					  border-bottom:1px solid gray;}
+			#a1 ul li:first-child{border-left:1px solid gray;}
+			#a1 ul li a{display:block; /* 글 전체의 색 및 padding 등을 주기 위해 block으로 변경 */
+						padding:5px 2px;
+						color:#2db600;
+						width:80px;
+						text-align:center;}
+			#a1 ul li a:hover{background:#999; color:#fff;}
+			
+			/* a2 정의 */
+			#a2{position:absolute; right:3px; bottom:3px;}
+			#a2 ul{overflow:hidden;}
+			#a2 ul li{border-right:1px solid gray; 
+					  border-top:1px solid gray;
+					  border-bottom:1px solid gray;}
+			#a2 ul li:first-child{border-left:1px solid gray;}
+			#a2 ul li a{display:block; /* 글 전체의 색 및 padding 등을 주기 위해 block으로 변경 */
+						padding:15px 2px;
+						color:blue;
+						width:150px;
+						text-align:center;}
+			#a2 ul li a:hover{background:#999; color:#fff;}
+			
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<div id="hgroup">
+				<h1>Rint Development</h1>
+				<h2>HTML + CSS</h2>
+			</div>
+			
+			<!-- 상단메뉴 -->
+			<div id="a1">
+				<ul>
+					<li><a href="#">web</a>
+					<li><a href="#">mobile</a>
+					<li><a href="#">game</a>
+					<li><a href="#">simulation</a>
+					<li><a href="#">data</a>
+				</ul>
+			</div>
+			
+			<!-- 상단메뉴 2-->
+			<div id="a2">
+				<ul>
+					<li><a href="#">HTML</a>
+					<li><a href="#">CSS</a>
+					<li><a href="#">Java Script</a>
+					<li><a href="#">JQuery</a>
+					<li><a href="#">JSP</a>
+				</ul>
+			</div>
+		</header>
+	</body>
+</html>

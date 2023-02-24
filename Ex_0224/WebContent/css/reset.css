@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* 스타일시트이기 때문에 따로 태그를 만들지 않는다. */
+*{margin:0; padding:0;}
+a{text-decoration:none;}
+li{list-style:none;}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>box shadow</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			p{width:300px; height: 200px;
+			  padding:10px;
+			  background:#2db600;
+			  margin:30px auto;}
+			
+			/* border의 바깥쪽 그림자 */
+			/* box-shadow의 순서대로 의미하는 것
+			   1. 바깥쪽 얼마정도 나올지(x좌표)
+			   2. 바깥쪽 얼마정도 나올지(y좌표)
+			   3. 번지는 정도(수준)
+			   4. 그림자 색깔 */
+			/* box-shadow : x좌표 y좌표 번짐정도 컬러 */ 
+			/* .p1{box-shadow:10px 10px 5px #333;} */
+			/* .p1{box-shadow:-10px -10px 5px #333;} */ 
+			/* rgba(red, green, blue, 투명도:0-완전투명, 1-불투명) */
+			.p1{box-shadow:10px 10px 5px rgba(0, 0, 255, 0.3);} /* 태그에만 적용, 글에는 적용 x */
+			
+			/* border의 안쪽 그림자 */			
+			/* inset 그림자의 x좌표, y좌표, 번짐정도, 두께, 컬러 */
+			.p2{box-shadow:inset 5px -5px 5px 10px #333;}
+			
+		</style>
+	</head>
+	
+	<body>
+		<p class="p1">안녕</p>
+		<p class="p2">하세요</p>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블의 스타일 정의 1</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			/* ','를 씀으로써 여러 태그에 한번에 스타일시트를 적용할 수 있다. */
+			table, th, td{border-collapse:collapse;
+				  border-color:gray;
+				  }
+				  
+			table{width:900px; height:450px;
+				  margin:10px auto;
+				  background:#ffc;}
+			
+			caption{font:bold 40px "hy헤드라인m", sans-serif; /* font를 여러개 설정할 때 size와 family(글꼴)은 항상 넣어줘야 한다. */
+				    color:blue;
+				    margin-bottom:15px;}
+			
+			th{font-size:20px;
+			   font-family:"hy신명조", sans-serif;
+			   width:100px; /* table의 전체 width가 900px이기 때문에 알아서 잘 설정이 된다. */
+			   }
+			  
+			thead th{padding:15px 0;
+					 background:#2db600;
+					 border-bottom:5px double #003;}
+					 
+			th:nth-child(1){border-right: 3px solid #003;}
+			
+			td{height:100px;
+			   text-align:center;
+			   font-family:"휴먼명조", sans-serif;}	
+		</style>
+	</head>
+	
+	<body>
+		<table border="1">
+			<caption>업종별 모범거래 기준 주요 내용</caption>
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>제빵</th>
+					<th>피자</th>
+					<th>치킨</th>
+					<th>커피</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<th>영업 지역</th>
+					<td class="a">500m</td>
+					<td class="a">1,500m</td>
+					<td class="a">800m</td>
+					<td class="a">500m</td>
+				</tr>
+				
+				<tr>
+					<th>광고</th>
+					<td>관련 내용 없음</td>
+					<td>총 광고비 본사와 사전 동의<br>광고비 승부</td>
+					<td>총 광고비 본사와 사전 동의<br>광고비 승부</td>
+					<td>총 광고비 본사와 사전 동의<br>광고비 승부</td>
+				</tr>
+				
+				<tr>
+					<th>대금 지급</th>
+					<td>본사와 협의</td>
+					<td>본사와 협의</td>
+					<td>본사와 협의</td>
+					<td>관련 내용 없음</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+	</body>
+</html>

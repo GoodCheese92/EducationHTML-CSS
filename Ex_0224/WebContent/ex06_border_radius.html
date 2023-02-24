@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border의 둥근 모서리</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			h1{width:200px;
+			   border:1px solid red;
+			   padding:80px 0;
+			   text-align:center;
+			   margin:10px auto;
+			   border-radius:100px; /* border-radius:사각형의 테두리 굴곡을 설정할 수 있다. */
+			   /* border-radius
+			      1개: 전부(좌상 우상 우하 좌하)
+			      2개: 좌상우하 우상좌하
+			      3개: 좌상 우상좌하 우하
+			      4개: 좌상 우상 우하 좌하 */
+			   }
+			.a1{width:200px;
+				background:green;
+			    padding:80px 0;
+			    text-align:center;
+			    margin:10px auto;
+			    border-radius:20px 40px; /* border-radius:사각형의 테두리 굴곡을 설정할 수 있다. */
+			    }
+
+			.a2{width:200px;
+				background:red;
+			    padding:80px 0;
+			    text-align:center;
+			    margin:10px auto;
+			    border-radius:20px 40px 60px; /* border-radius:사각형의 테두리 굴곡을 설정할 수 있다. */
+			    }
+
+			.a3{width:200px;
+				background:blue;
+			    padding:80px 0;
+			    text-align:center;
+			    margin:10px auto;
+			    border-radius:20px 40px 60px 80px; /* border-radius:사각형의 테두리 굴곡을 설정할 수 있다. */
+			    }
+			    
+			.a4{margin:10px auto;}
+			img{border-radius:50px;}
+		</style>
+	</head>
+	
+	<body>
+		<h1>내용</h1>
+		<h1 class="a1">내용</h1>
+		<h1 class="a2">내용</h1>
+		<h1 class="a3">내용</h1>
+		<p class="a4"><img alt="" src="image/img6.jpg"></p>
+	</body>
+</html>

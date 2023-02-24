@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- viewport : 사용자가 보고있는 창
+			 initial-scale : 현재 페이지가 처음 실행됐을 때 1.0의 원본 비율을 그대로 사용 -->
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<title>반응형 웹 기본</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			/* 화면너비 0 ~ 767px의 범위라면... */
+			@media screen and (max-width:767px){
+				html{
+					/* background:red; */
+					background:black;
+					color:white;
+					font-size:50px;
+					border:10px solid black;
+					text-shadow: 0     0    4px #ccc,
+			  			 		 0    -5px  4px #ff3,
+			  			  	     2px -10px  6px #fd3,
+			  			  		-2px -15px 11px #f80,
+			  			         2px -19px 18px #f20;
+				}
+			}
+			
+			/* 화면너비 768px ~ 959px의 범위라면... */
+			@media screen and (min-width:768px) and (max-width:959px){
+				html{
+					/* background:green; */
+					background:black;
+					color:white;
+					font-size:25px;
+					border:30px solid black;
+					text-shadow: 0     0   4px  #cca,
+			  			  		 0    -5px 4px  #ffa,
+			  			  		 2px -10px 6px  #fda,
+			  			  		-2px -15px 11px #f8a,
+			  			  		 2px -19px 18px #f2a;
+				}
+			}
+			
+			/* 화면너비 960px이상인 모든 해상도 범위... */
+			@media screen and (min-width:960px){
+				html{
+					/* background:blue; */
+					background:black;
+					color:white;
+					font-size:18px;
+					border:50px solid black;
+					text-shadow:0      0     4px #ccf,
+			  			  		0     -5px   4px #fff,
+			  			  		2px  -10px   6px #fdf,
+			  			  		-2px -15px  11px #f8f,
+			  			  		2px  -19px  18px #f2f;
+				}
+			}
+			
+			p{margin:10px auto;
+			  width:300px; height:200px;
+			  font-family:"hy헤드라인m", sans-serif;
+			  font-weight:bold;
+			  }
+		</style>
+	</head>
+	
+	<body>
+		<p>내용이 들어갈 부분</p>
+		
+	</body>
+</html>

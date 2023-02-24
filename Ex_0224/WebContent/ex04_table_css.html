@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블 스타일 정의 2</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			body{background:#333; color:#ccc;}
+			
+			table{width:1000px;
+				  margin:10px auto;}
+				  
+			caption{font-size:40px;
+					font-family:"hy헤드라인m", sans-serif;
+					font-weight:bold;
+					margin-bottom:10px;}
+			
+			td{padding:15px;}
+			
+			td:nth-child(1), td:nth-child(2), td:nth-child(3){border-right:1px solid #999;}
+			td:nth-child(1), td:nth-child(2), td:nth-child(4){text-align:center;}
+			td{border-top:1px solid #999;}
+			tr:last-child td{border-bottom:1px solid #999;}
+			
+			.menu th{border-right:1px solid #999;
+					 border-top:1px solid #999;
+					 border-bottom:1px double #999;
+				     font:20px "hy신명조", sans-serif;
+				     padding-bottom:5px;}
+			.menu th:last-child{border-right:none;}
+			
+			a:visited{color:#ccc;}
+			a:hover{color:#2db600;}
+			a:active{color:#red;}
+		</style>
+	</head>
+	
+	<body>
+		<table>
+			<caption>List for Store</caption>
+			
+			<!-- 각각 행 마다 width를 다르게 설정하는 법 -->
+			<!-- colgroup을 통해 열 마다 간격을 지정할 수 있다.
+				  아무 것도 넣지 않으면 알아서 100% 중 남는 비율을 사용한다. -->
+			<colgroup>
+				<col width="8%">
+				<col width="30%">
+				<col width=""> <!-- 아무 것도 넣지 않으면 나머지가 알아서 맞춰진다. -->
+				<col width="15%">
+			</colgroup>
+			
+			<thead>
+				<tr class="menu">
+					<th>지역</th>	
+					<th>영업 지점</th>	
+					<th>주소</th>	
+					<th>전화번호</th>	
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td><a href="http://theashop.co.kr/" target="_blank">에이샵 현대백화점 압구정점</a></td>
+					<td>서울 강남구 압구정로 165 현대백화점 압구정본점 1층</td>
+					<td>02-3449-5474</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>에이샵 현대백화점 무역센터점</td>
+					<td>서울 강남구 테헤란로 517 현대백화점 무역센터점 4F</td>
+					<td>02-3467-8373</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>Apple 가로수길</td>
+					<td>서울 강남구 가로수길 43</td>
+					<td>080-500-0029</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>Apple 잠실</td>
+					<td>서울 송파구 올림픽로 300 롯데월드몰 1층</td>
+					<td>080-500-0098</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>Apple 명동</td>
+					<td>서울 중구 남대문로 84</td>
+					<td>080-500-1007</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>Apple 여의도</td>
+					<td>서울 영등포구 국제금융로 10 IFC몰 L1</td>
+					<td>080-500-0013</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>프리스비 명동 본점</td>
+					<td>서울 중구 명동8길 11</td>
+					<td>02-318-7120</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>A STORE 이마트 양재점</td>
+					<td>서울 서초구 매헌로 16</td>
+					<td>050-1319-0280</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>A-Store 일렉트로마트 영등포점</td>
+					<td>서울 영등포구 영중로 15 B1, 에이스토어</td>
+					<td>02-3468-1209</td>
+				</tr>
+				
+				<tr>
+					<td class="aa">서울</td>
+					<td>A STORE 이마트 성수점</td>
+					<td>서울 성동구 뚝섬로 379 이마트 성수점</td>
+					<td>050-1426-1209</td>
+				</tr>
+			</thead>
+		</table>
+	</body>
+</html>
