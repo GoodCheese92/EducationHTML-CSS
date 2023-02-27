@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>서브메뉴 만들기</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			#nav{width:900px; height:45px; padding:6px 7px;
+				 background:#2db600;
+				 margin:10px auto;
+				 }
+				 
+			/* 자식 선택자를 통해 직계 li에게만 속성을 적용 */
+			#nav > li{float:left; position:relative;
+					  margin:3px 10px;
+					  margin-left:45px;
+					  text-align:center;}
+					  
+			#nav li a{display:block; /* block요소로 바꿔야 padding이 제대로 들어감 */
+					  font:bold 20px "hy헤드라인m", sans-serif;
+					  color:#000000;
+					  padding:6px 20px;
+					  }
+			
+			#nav > li:visited{background:#fff; color:#0100FF;
+							 border-radius:30px;
+							 display:block;}
+					  
+			#nav li:hover a{background:#fff; color:#0100FF;
+							border-radius:30px;}
+			
+			#nav li:active a{background:#fff; color:#0100FF;
+							 border-radius:30px;
+							 display:block;}
+			
+			#nav ul{width:150px; border:1px none #fff;
+					position:absolute; left:0; top:40px;}
+			
+			#nav > li ul{display:none;}
+			
+			#nav li:hover ul{display:block;}
+			
+			#nav li ul li a{font-weight:normal;
+							font-family:"휴먼명조", sans-serif}
+							
+			#nav li ul li:hover a{background:#ccc;
+								  font-weight:bold;}
+		</style>
+	</head>
+	
+	<body>
+		<ul id="nav">
+			<li><a href="#">처음으로</a></li>
+			
+			<li>
+				<a href="#">여행안내</a>
+				<ul>
+					<li><a href="#">소개합니다.</a></li>
+					<li><a href="#">오시는길</a></li>
+				</uL>
+			</li>
+			
+			<li>
+				<a href="#">이용방법</a>
+				<ul>
+					<li><a href="#">객실보기</a></li>
+					<li><a href="#">요금안내</a></li>
+					<li><a href="#">예약하기</a></li>
+					<li><a href="#">예약확인</a></li>
+				</uL>
+			</li>
+			
+			<li>
+				<a href="#">게시판</a>
+				<ul>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">Q &amp; A</a></li>
+				</uL>
+			</li>
+			
+			<li><a href="#">사이트맵</a></li>
+		</ul> <!-- nav -->
+	</body>
+</html>

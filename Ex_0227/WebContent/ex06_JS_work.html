@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 work</title>
+		
+		<script>
+			// prompt로 입력받은 값은 ""문자열 구조
+			let kor = prompt("국어");
+			
+			// kor을 실제 정수로 바꿔주자
+			kor = Number(kor);	// 자바에서 Integer.parseInt(kor)와 같은 역할
+			
+			let eng = Number(prompt("영어"));
+			let mat = Number(prompt("수학"));
+			
+			document.write("국어 : " + kor + "점, 영어 : " + eng + "점, 수학 : " + mat + "점<br>");
+			let result = kor + eng + mat;
+			document.write("총점 : " + result + "점<br>");
+			document.write("평균 : " + (result/3).toFixed(2) + "점<br>");
+			
+			document.write("<hr>");
+			// String(result) : 정수 -> 문자열, 자바에서는 String.valueOf(result)
+			document.write(" result + 100 : " + (String(result) + 100));
+			
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

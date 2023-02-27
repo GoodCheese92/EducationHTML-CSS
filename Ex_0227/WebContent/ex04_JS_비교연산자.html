@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바 스크립트의 비교연산자</title>
+		
+		<script>
+			let a = 10;
+			let b = 3;
+			let result;
+			
+			document.write("a : " + a + "<br>");
+			document.write("b : " + b + "<br>");
+			
+			// result의 자료형은 모두 다 쓸수 있기 때문에 boolean으로도 활용 가능
+			result = a > b;
+			
+			document.write("result(a>b) : " + result);
+			
+			result = 100;
+			document.write("<br>result(100) : ", result, '<br>');
+			
+			result = a <= b;
+			document.write("result(a<=b) : " + result + "<br>");
+			
+			result = a != b;
+			// 예를 들어 로그인 시 정보와 맞지 않으면 뜨는 경고창처럼 뜨게 하는 것
+			alert(result); // alert() : 화면에 띄워주는 경고창
+		</script>
+	</head>
+	
+	<body>
+		
+	</body>
+</html>

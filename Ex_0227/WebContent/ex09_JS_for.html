@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 for</title>
+		
+		<style>
+			*{font:bold "hy헤드라인m", sans-serif;
+			  color:#2db600;
+			  background:#FAF4C0;
+			  }
+			.a{font:bold 15px "hy헤드라인m", sans-serif;
+			   color:#2db600;
+			   background:#DAD9FF;
+			   }
+				
+		</style>
+	</head>
+	
+	<body>	
+		<script class="a">
+			for(let i=1; i<5; i++){	// int i가 아니라 let i로 써야한다.(주의!!)
+				document.write(i, "<br>");
+			} // for
+			
+			document.write("<hr>");
+			
+			// 원하는 값을 prompt로 입력받고, 해당 값에 대해 구구단을 출력
+			// var num = Number(prompt("몇 단?"));
+			var num = 4;
+			for(let i=1; i<10; i++){
+				document.write(num + " x " + i + " = " + (num*i) + "<br>");
+			} // for 
+			
+			document.write("<hr>");
+			
+			for(var i=6; i>=1; i--){
+				document.write('<h' + i + '>' + "자바스크립트 h" + i + "태그" + "</h" + i + ">");
+			} // for
+			
+			document.write("<hr>");
+			
+			document.write("<ul>");
+			for(let i = 0; i < 5; i++){
+				document.write("<li>메뉴"+ (i+1) + "</li>");
+			} // for
+			document.write("</ul>")
+		</script>
+	</body>
+</html>

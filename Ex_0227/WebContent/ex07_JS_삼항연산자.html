@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 삼항연산자</title>
+		
+		<script>
+			let n1 = Number(prompt("값1"));
+			let n2 = Number(prompt("값2"));
+			
+			// document 대신 -> alert() : alert()로도 사용 가능
+			// prompt()가 문자열로 들어오므로 결과가 제대로 나오지 않는다.
+			// 따라서 Number를 사용해야 한다.
+			n1 < n2 ? document.write("참") : document.write("거짓");
+			
+			document.write("<hr>");
+			
+			// prompt()로 값을 받으면 문장으로 값이 넘어오지만
+			// if문 등에서 비교연산자와 사용할 경우 알아서 정수형태로 인지
+			n1 = prompt("수1");
+			n2 = prompt("수2");
+			// prompt()로 값을 받았지만 비교연산자 하는 과정에서 알아서 형변환이 일어난다.
+			if(n1 >= 50 && n2 >= 50){
+				document.write("합격");
+			} else {
+				document.write("불합격");
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

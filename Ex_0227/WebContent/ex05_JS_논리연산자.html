@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 논리연산자</title>
+		
+		<script type="text/javascript">
+			let lastName = prompt("당신의 성은 무엇입니까?"); // prompt() : 키보드에서 값을 받고 싶을 때 사용, 항상 문자열로 값이 입력됨
+			let age = prompt("당신의 나이는 몇 살입니까?");
+			let result = age >= 30 && age < 40 && lastName == "이";
+			// 자바에서는 문자열이 같은지 비교할 때, .equals()를 사용
+			// 자바 스크립트에서는 같은지 비교할 때, ==을 사용 -> 모든 자료형을 비교할 때 ==을 사용한다.
+			
+			document.write("result : " + result + "<br>");
+			if(result){
+				document.write("합격입니다.<br>");
+			} else {
+				document.write("불합격입니다.<br>");
+			}
+			
+			document.write("lastName : " + lastName + ", age : " + age + "<br>");
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

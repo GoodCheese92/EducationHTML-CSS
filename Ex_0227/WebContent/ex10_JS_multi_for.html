@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 다중 for문</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<script>
+			for(let i = 2; i<=9; i++){
+				document.write("<h1>" + i + "단</h1>");
+				document.write("<ul>");
+				for(let j = 1; j<=9; j++){
+					document.write("<li>" + i + " x " + j + " = " + (i*j) + "</li>");
+				} // inner for
+				document.write("</ul>")
+				document.write("<hr>");
+			} // outer for
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>
