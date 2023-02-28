@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 구구단</title>
+		
+		<style>
+			hr{width:300px;
+			   margin:10px 0;}
+			#disp{width:300px;
+				  height:300px;
+				  background:black;
+				  color:white;
+				  }
+		</style>
+		
+		<script>
+			// input의 value는 기본적으로 문자열 구조이므로 +를 사용하면 이어붙어서 표기된다.
+			// 단 -, /, *, >, <등은 Number()형태로 변환하지 않아도 연산이 가능
+			// alert(dan + 1);
+			function start() {
+				let dan = document.getElementById("dan").value;
+			
+				// 유효성 체크(무결성 체크)
+				// 정규식을 활용하면 원하는 값만 입력받을 수 있다.
+				let num_check = /^[2-9]+$/; // 2 ~ 9로 시작하는 모든 숫자가 가능
+				
+				if(!num_check.test(dan)){
+					alert("2 ~ 9 숫자(정수)만 입력해야 합니다.")
+					return;
+				}
+				
+				/* if(dan.trim() == ""){
+					alert("값을 입력해야 합니다.");
+					return; // 비어있다면 아래 코드를 실행 X
+				}
+				
+				if(dan.trim() < 2 || dan.trim() > 9){
+					alert("2 ~ 9 사이의 값만 입력하세요.")
+					return;
+				} */
+				
+				
+				
+				// 구구단 생성
+					let str = "";
+					for(let i=1; i<=9; i++){
+						str += dan + " x " + i + " = " + (dan*i) + "<br>";
+					} // for
+					
+					// 구구단을 넣을 div를 검색
+					let disp = document.getElementById("disp");
+					disp.innerHTML = str;
+			} // end of start()
+			
+			let b_show = true;
+			
+			function show(){
+				b_show = !b_show;
+				
+				let btn = document.getElementById("btn_show");
+				
+				b_show ? btn.value = "숨기기" : btn.value = "보이기";
+				
+				// div 검색 및 숨기기 처리
+				let div = document.getElementById("disp");
+				// 		 #disp{display:block;}
+				b_show ? div.style.display = 'block' : div.style.display = 'none';
+				
+			} // end of show()
+			
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			단 : <input id="dan">
+			<input type="button" value="결과보기" onclick="start();">
+			<input type="button" value="숨기기" id="btn_show" onclick="show();">
+		</div>
+		
+		<hr>
+		
+		<div id="disp">
+			
+		</div>
+	</body>
+</html>

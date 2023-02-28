@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 메서드</title>
+		
+		<script>
+			let aa = "결과 : "; // 일반적인 전역변수 설정은 문제가 되지 않는다.
+			
+			// 태그를 검색하는 코드는 '절대' 전역으로 지정할 수 없다.
+			// let a2 = document.getElementById("res2"); 
+		
+			// 자바스크립트의 메서드, 반환형이 없지만 return을 사용할 수 있다.
+			function test1(){
+				// function 키워드로 시작하는 js의 메서드는 반환형을 가지고 있지 않다.
+				let res = document.getElementById('res2'); // id가 res2인 입력상자를 검색
+				alert(aa + res.value); // res2인 아이디를 갖은 입력상자의 value를 경고창으로 띄움
+			} // end of test1()
+			
+			function test2(num){
+				// 자바스크립트의 메서드는 파라미터 타입을 따로 지정하지 않는다.
+				// alert(num + "을 parameter로 받았습니다.");
+				// id가 res1인 객체를 검색
+				let res = document.getElementById("res1"); // res는 id가 입력상자를 의미
+				res.value = num; // res의(id가 res1인 입력상자) value를 num으로 설정
+			} // end of test2()
+			
+			function test3() {
+				let h_tag = document.getElementById("h");
+				// h_tag.value = "ㅇㅇ"; // value 속성이 없는 태그에는 방법이 다르다.
+				// h_tag.innerHTML = "버튼3을 눌렀습니다.";
+				h_tag.textContent = "버튼3을 눌렀습니다.";
+			} // end of test3()
+		</script>
+		
+		<style>
+			body{margin:10px;}
+		</style>
+	</head>
+	
+	<body>
+		<!-- 자바에서 textfield, button 등 사용하기 위해 사용 -->
+		<input id="res1" type="text" value="" placeholder="이름을 입력하세요"><br>
+		<!-- type : 종류, value : 미리 넣고싶은 값, placeholder : 가이드 텍스트 -->
+		<input id="res2" placeholder="값을 넣는 가이드 라인"><br> <!-- type을 넣지 않으면 기본적으로 text로 생성 -->
+		<!-- type="text"속성이 없으면 일반적인 입력상자가 된다. -->
+		
+		<!-- 버튼1을 클릭하면 test1()메서드가 호출된다. -->
+		<input type="button" value="버튼1" onclick="test1();"> <!-- onclick(onClick) : 클릭 감지 -->
+		<!-- 문자열이 파라미터로 넘어가면 onclick을 ""로 선언했으면 문자열을 ''로 넘겨줘야 한다.(반대도 가능) -->
+		<input type="button" value="버튼2" onclick="test2('안녕');">
+		<input type="button" value="버튼3" onclick="test3();">
+		<h1 id="h"></h1>
+		
+	</body>
+</html>

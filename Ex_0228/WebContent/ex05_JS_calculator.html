@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>계산기 만들기</title>
+		
+		<style>
+			table{border-collapse:collapse;
+				  text-align:center;}
+			
+		</style>
+		
+		<script>
+			function check(num1, num2){
+				let num_check = /^[0-9]+$/; 
+				if(!num_check.test(num1.value) || !num_check.test(num2.value)){
+					alert("정수만 입력해주세요.");
+					return;
+				}
+			} // end of check();
+		
+			function calculate(cal) {
+				let num1 = document.getElementById("num1");
+				let num2 = document.getElementById("num2");
+				
+				let res = document.getElementById("res");
+				// 유효성 검사
+				check(num1, num2);
+				if(num1.value.trim() == "" && num2.value.trim() == ""){
+					alert("빈 칸은 수행할 수 없습니다.")
+					return;
+				}
+				
+				switch(cal){
+				case "+":
+					res.value = Number(num1.value) + Number(num2.value);
+					break;
+				case "-":
+					res.value = Number(num1.value) - Number(num2.value);
+					break;
+				case "*":
+					res.value = Number(num1.value) * Number(num2.value);
+					break;
+				case "/":
+					res.value = Number(num1.value) / Number(num2.value);
+					break;
+				} // switch
+				  
+			} // end of plus()
+			
+		</script>
+	</head>
+	
+	<body>
+		<table border="1">
+			<tr>
+				<th>수1</th>
+				<td colspan="3"><input id="num1" type="text" placeholder="숫자를 입력해주세요(수1)"></td>
+			</tr>
+
+			<tr>
+				<th>수2</th>
+				<td colspan="3"><input id="num2" type="text" placeholder="숫자를 입력해주세요(수2)"></td>
+			</tr>
+			
+			<tr class="btn">
+				<td><input id="plus_btn" type="button" value="+" onclick="calculate('+');"></td>
+				<td><input id="minus_btn" type="button" value="-" onclick="calculate('-');"></td>
+				<td><input id="multiple_btn" type="button" value="*" onclick="calculate('*');"></td>
+				<td><input id="divide_btn" type="button" value="/" onclick="calculate('/');"></td>
+			</tr>
+			
+			<tr>
+				<th>결과</th>
+				<td colspan="3"><input id="res" type="text" placeholder=""></td>
+			</tr>
+		</table>
+	</body>
+</html>

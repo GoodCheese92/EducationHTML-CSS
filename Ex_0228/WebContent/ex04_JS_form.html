@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 form 태그</title>
+		
+		<style>
+			table{border-collapse:collapse;
+				  font-size:30px;}
+			.t1{margin:10px auto;
+				width:500px; 150px;
+				text-align:center;
+				}
+			.t1 tr{vertical-align:center;}
+			.t1 tr input{width:300px;
+						 height:25px;}
+		</style>
+		
+		<script>
+			function check1() {
+				// f1이라는 id를 가진 form태그를 검색
+				let f = document.getElementById("f1");
+				// form 태그 안에 name을 바로 찾을 수 있다.
+				// 검색한 form 태그인 f를 통해 id라는 name 속성을 가진 태그로 접근 
+				let id = f.id.value;
+				let pwd = f.pwd.value;
+				let age = f.age.value;
+				
+				// 유효성 체크
+				if(id == ''){
+					alert("아이디는 반드시 입력해야 합니다.")
+					return;
+				}
+				
+				if(pwd == ''){
+					alert("비밀번호는 필수입니다.");
+					return;
+				}
+				
+				let check_age = /^[0-9]+$/;
+				if(!check_age.test(age)){
+					alert("나이는 정수만 입력해주세요.");
+					return;
+				}
+				
+				// 전송방식
+				// GET : 파라미터를 url에 노출. 보안성이 떨어지지만 속도가 빠른 편
+				// POST : 파마리터가 url에 노출되지 않음. 속도는 느린편이지만 보안성이 높아진다.
+				f.method="POST";
+				
+				// login.jsp 파일을 연다.
+				f.action = "login.jsp";
+				
+				// 입력된 데이터(form안에 name으로 설정된 값)을 서버측으로 전송
+				// url 뒤에서 파라미터로 전송된다.
+				// name으로 지정한 속성만 전달이 된다.
+				f.submit();
+				
+			} // end of check1()
+			
+			function check2() {
+				// name이 fff로 지정되어 있는 from태그 가져오기
+				let fff = document.fff;
+				let id = fff.id.value;
+				let pwd = fff.pwd.value;
+				
+				// 유효성 검사 했다고 가정 -- 소스의 간소화를 위해
+				
+				
+				// fff.method = "get";
+				// fff.action = "login.jsp";
+				fff.submit();
+			} // end of check2()
+		</script>
+	</head>
+	
+	<body>
+		<!-- 서버로 값을 전송하기 위해 데이터를 스크립트 영역으로 옮겨주기 위한 태그 -->
+		<form id = "f1">
+			<table class="t1" border="1">
+				<tr>
+					<th>아이디</th>
+					<!-- name 속성은 id와 비슷하지만, input, textArea 태그 등의 정해진
+						  일부 태그에서만 사용이 가능하며, form 태그 밖에서 name 속성을 정의하는 것은 의미가 없다! -->
+					<td><input name="id"></td> <!-- name속성은 form 태그안에서 input 태그에만 유효하다. -->
+				</tr>
+				
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td> <!-- type을 password로 하면 보여지지 않는다. --> 
+				</tr>
+				
+				<tr>
+					<th>나이</th>
+					<td><input name="age"></td>  
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="폼체크1" onclick="check1();">
+					</td>				 
+				</tr>
+			</table>	
+		</form>
+		
+		<hr>
+		
+		<form name="fff" method="get" action="login.jsp"> <!-- form 태그에서 바로 선언 가능 -->
+			id : <input name="id"><br>
+			pwd : <input name="pwd"><br>
+			<input type="button" value="폼체크2" onclick="check2();">								
+		</form>
+		
+		<hr>
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
