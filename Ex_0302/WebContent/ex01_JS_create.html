@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 요소(태그) 생성하기</title>
+		
+		<script>
+			let array = ["서울", "대전", "제주"];
+		
+			// 현재 html문서가 실행되면 자동으로 호출되는 생성자와 같은 영역
+			window.onload = function(){
+				// alert("페이지 로드완료!!");
+				let sido = document.getElementById("sido");
+				
+				// 위에서 검색된 sido태그에 자식요소인 option태그를 생성하여 추가
+				for(let i=0; i<array.length; i++){
+					// <option>태그를 생성
+					let opt = document.createElement("option");
+					
+					// 생성된 option태그에 내용을 추가
+					opt.textContent = array[i];
+					
+					// sido태그에 opt를 자식요소로 추가
+					sido.appendChild(opt);
+				} // for
+			}
+		</script>
+	</head>
+	
+	<body>
+		<select id="sido">
+			<option>:::선호하는 지역:::</option>
+		</select>
+	
+		<hr>
+		
+		<select>
+			<option>:::메뉴선택:::</option>
+			<option>메뉴 1</option>
+			<option>메뉴 2</option>
+		</select>
+	</body>
+</html>

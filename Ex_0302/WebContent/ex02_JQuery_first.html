@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery를 시작해보자</title>
+		
+		<!-- JQuery : js의 검색, 속성, 이벤트 등의 작업을 간단하게 처리할 수 있도록 만들어진 언어 -->
+		<!-- JQuery기능을 가져오는 코드 1 -->
+		<!-- <script src="https://code.jquery.com/jquery-3.6.3.js"> -->
+		
+		<!-- JQuery기능을 가져오는 코드 2 -->
+		<script src="js/jquery-3.6.3.js">
+			// 인터넷이 되는 환경에서는 알아서 다운이 되지만 아니라면 직접 다운을 받아야 한다.
+			// 안쪽에 그 어떠한 코드도 들어가면 안된다. -> 따로 자바스크립트를 쓰려면 script 태그를 다시 만들어서 사용해야 한다.
+		</script>
+		
+		<script>
+			/* JQuery사용을 위한 초기화 영역 */
+			$(function(){
+				// alert("초기 세팅 완료!!");
+				$("#btn1").click(function(){ // 익명 클래스
+					alert("버튼 클릭됨");
+				});
+				
+				// 초기화 함수에 넣어야 작동!!
+				$("#btn2").click(function(){ // input 태그라고 명시하지 않아서 작동 X 일수도 있다.
+					let msg = $("#msg").val();
+					// alert(msg);
+					$("#msg").val("aaaa");
+				});
+				
+				// id로 접근할 때는 '#'
+				$("#btn3").click(testClick);
+				
+				// class로 접근할 때는 '.'
+				$(".btn4").click(testClick);
+			} );
+			
+			// 버튼3 클릭 시 testClick()함수를 호출하자
+			function testClick(){
+				alert("버튼3 클릭")
+			} // end of testClick();
+			
+		</script>
+	</head>
+	
+	<body>
+		<input id="msg"/><br>
+		<input type="button" id="btn1" value="버튼1"/>
+		<input type="button" id="btn2" value="메시지"/>
+		<input type="button" id="btn3" value="test"/>
+		<input type="button" class="btn4" value="test2"/>
+	</body>
+</html>

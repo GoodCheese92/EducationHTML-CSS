@@ -59,7 +59,7 @@
 			} // end of check1()
 			
 			function check2() {
-				// name이 fff로 지정되어 있는 from태그 가져오기
+				// name이 fff로 지정되어 있는 form 태그 가져오기
 				let fff = document.fff;
 				let id = fff.id.value;
 				let pwd = fff.pwd.value;
@@ -71,6 +71,20 @@
 				// fff.action = "login.jsp";
 				fff.submit();
 			} // end of check2()
+			
+			// 가장 많이 사용
+			function check3(f) {
+				// 파라미터로 전달될 f객체가 form 태그 자체
+				let id = f.id.value;
+				let pwd = f.pw.value;
+				
+				// 유효성 체크
+				f.method="get";
+				f.action="login.jsp";
+				
+				// f 태그가 가진 모든 name 속성을 login.jsp에 파라미터로 전달
+				f.submit();
+			} // end of check3()
 		</script>
 	</head>
 	
@@ -113,37 +127,14 @@
 		
 		<hr>
 		
+		<form>
+			id:<input name="id"><br>
+			pwd:<input type="password" name="pw"><br>
+			
+			<!-- this는 폼체크3 버튼을 의미한다.
+				 this.form은 나를 포장하고 있는 폼태그를 의미한다. -->
+			<input type="button" value="폼체크3" onclick="check3(this.form);">
+		</form>
 		
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

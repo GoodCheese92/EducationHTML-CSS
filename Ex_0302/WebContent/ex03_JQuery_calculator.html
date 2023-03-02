@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery 계산기</title>
+		
+		<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+		
+		<script>
+			// 초기화 영역
+			$(function(){
+				// $("#plus").click(cal);
+				
+				$("#plus, #minus, #multi, #divide").click(function(){
+					// this는 현재 클릭을 발생시킨 객체
+					cal($(this));
+				});
+			});
+			
+			function cal(op){
+				let num_check = /^[0-9]+$/;
+				if(!num_check.test($("#num1").val()) || !num_check.test($("#num2").val())){
+					alert("정수만 입력해 주세요.")
+				}
+				// alert(op.val());
+				
+				let n1 = $("#num1").val();
+				let n2 = $("#num2").val();
+				
+				n1 = Number(n1);
+				n2 = Number(n2);
+				
+				let result = 0;
+				
+				$("operation").text("+");
+				
+				switch(op.val()){
+				case "합":
+					result = n1 + n2;
+					break;
+				case "차":
+					result = n1 - n2;
+					break;
+				case "곱":
+					result = n1 * n2;
+					break;
+				case "나누기":
+					if(n2 == 0){
+						alert("0으로 나눌 수 없습니다.");
+						return;
+					}
+					result = n1 / n2;
+					$("#result").val(result.toFixed(2));
+					return;
+				} // switch
+				
+				
+				$("#result").val(result);
+			} // end of cal()
+			
+		</script>
+		
+		<style>
+			input{text-align:center;}
+			
+			#plus{margin-top:5px;}
+		</style>
+	</head>
+	
+	<body>
+		<input id="num1" size="3" placeholder="수1">
+		<span class="operation"></span>
+		<input id="num2" size="3" placeholder="수2"> =
+		<input id="result" size="5" placeholder="결과" readonly="readonly"> <br>
+		<input type="button" id="plus" value="합">
+		<input type="button" id="minus" value="차">
+		<input type="button" id="multi" value="곱">
+		<input type="button" id="divide" value="나누기">
+		
+	</body>
+</html>
